@@ -1,0 +1,12 @@
+_cache
+_site
+
+dist
+dist-newstyle/
+.ghc.environment.*
+.cabal-sandbox
+cabal.sandbox.config
+.stack-work
+
+*.o
+*.hi

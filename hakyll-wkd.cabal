@@ -1,0 +1,35 @@
+name:               hakyll-wkd
+version:            0.1.0.0
+synopsis: Hakyll-based OpenPGP Web Key Directory utility
+description:
+  Builds a Web Key Directory, given a list of keys on standard input.
+
+license:             AGPL-3
+license-file:        LICENSE
+author:              Fraser Tweedale
+maintainer:          frase@frase.id.au
+copyright:           Copyright 2021  Fraser Tweedale
+category:            Email, Cryptography
+
+build-type:         Simple
+cabal-version:      >= 1.10
+
+homepage:            https://github.com/frasertweedale/hakyll-wkd
+bug-reports:         https://github.com/frasertweedale/hakyll-wkd/issues
+source-repository head
+  type: git
+  location: https://github.com/frasertweedale/hakyll-wkd.git
+
+executable hakyll-wkd
+  main-is:          site.hs
+  build-depends:
+    base >= 4 && < 5
+    , bytestring
+    , text
+    , hakyll >= 4.12.5.1
+    , typed-process >= 0.2.3
+    , cryptonite >= 0.27
+    , memory >= 0.15
+    , base32-z-bytestring >= 1
+  ghc-options:      -threaded -Wall
+  default-language: Haskell2010
